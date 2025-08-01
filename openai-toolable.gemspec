@@ -5,13 +5,14 @@ require_relative "lib/openai/toolable/version"
 Gem::Specification.new do |spec|
   spec.name = "openai-toolable"
   spec.version = Openai::Toolable::VERSION
-  spec.authors = ["Russell Vancuren"]
-  spec.email = ["russell.vancuren@gmail.com"]
+  spec.authors = ["Russell Van Curen"]
+  spec.email = ["russell@vancuren.net"]
 
   spec.summary = "A Ruby gem that extends the OpenAI SDK to support function calling."
   spec.description = "This gem provides a simple and flexible way to define and use tools with the OpenAI API."
   spec.homepage = "https://github.com/vancuren/openai-toolable"
   spec.required_ruby_version = ">= 3.2.0"
+  spec.license = "MIT"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
