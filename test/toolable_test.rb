@@ -12,9 +12,22 @@ class ToolableTest < Minitest::Test
       ]
     )
 
-    assert_equal "get_weather", tool.name
-    assert_equal "Get the current weather in a given location", tool.description
-    assert_equal 2, tool.parameters.length
-    assert_instance_of Openai::Toolable::Parameter, tool.parameters.first
+    expected_json = {
+      type: "function",
+      function: {
+        name: "get_weather",
+        description: "Get the current weather in a given location",
+        parameters: {
+          type: :object,
+          properties: {
+            "location" => { type: :string, description: "The city and state, e.g. San Francisco, CA" },
+            "unit" => { type: :string, description: "The unit of temperature, e.g. celsius or fahrenheit" }
+          },
+          required: []
+        }
+      }
+    }
+
+    assert_equal expected_json, tool.to_json
   end
 end
