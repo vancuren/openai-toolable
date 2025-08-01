@@ -1,0 +1,25 @@
+PATH
+  remote: .
+  specs:
+    openai-toolable (0.1.0)
+      openai (~> 0.16.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    connection_pool (2.5.3)
+    minitest (5.25.5)
+    openai (0.16.0)
+      connection_pool
+    rake (13.3.0)
+
+PLATFORMS
+  arm64-darwin-23
+
+DEPENDENCIES
+  minitest (~> 5.0)
+  openai-toolable!
+  rake (~> 13.0)
+
+BUNDLED WITH
+   2.4.1
